@@ -1,0 +1,101 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram id="MPLS-ER" name="MPLSRenters ERD">
+    <mxGraphModel dx="1567" dy="651" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CLASSIFICATION" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#F8FAFC;strokeColor=#3B536D;strokeWidth=2;shadow=0;" value="&lt;div style=&quot;text-align:center;font-size:15px;font-weight:bold;color:#17324e&quot;&gt;CLASSIFICATION&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #cbd5e1&quot;&gt;&lt;div style=&quot;font-family:monospace;font-size:11px;text-align:left;line-height:1.55&quot;&gt;classification_id  [PK, NOT NULL]&lt;br&gt;code  [UNIQUE, NOT NULL]&lt;br&gt;title  [NOT NULL]&lt;br&gt;description  [NOT NULL]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="126" width="318" x="60" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AMENITY" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#F8FAFC;strokeColor=#3B536D;strokeWidth=2;shadow=0;" value="&lt;div style=&quot;text-align:center;font-size:15px;font-weight:bold;color:#17324e&quot;&gt;AMENITY&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #cbd5e1&quot;&gt;&lt;div style=&quot;font-family:monospace;font-size:11px;text-align:left;line-height:1.55&quot;&gt;amenity_id  [PK, NOT NULL]&lt;br&gt;name  [UNIQUE, NOT NULL]&lt;br&gt;description  [NOT NULL]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="104" width="318" x="1250" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="PROPERTY" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#F8FAFC;strokeColor=#3B536D;strokeWidth=2;shadow=0;" value="&lt;div style=&quot;text-align:center;font-size:15px;font-weight:bold;color:#17324e&quot;&gt;PROPERTY&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #cbd5e1&quot;&gt;&lt;div style=&quot;font-family:monospace;font-size:11px;text-align:left;line-height:1.55&quot;&gt;property_id  [PK, NOT NULL]&lt;br&gt;name  [NOT NULL]&lt;br&gt;contact_first_name  [NOT NULL]&lt;br&gt;contact_last_name  [NOT NULL]&lt;br&gt;contact_email  [NOT NULL]&lt;br&gt;contact_phone  [NULL]&lt;br&gt;address  [NOT NULL]&lt;br&gt;short_description  [NOT NULL]&lt;br&gt;long_description  [NULL]&lt;br&gt;latitude  [NULL]&lt;br&gt;longitude  [NULL]&lt;br&gt;min_rent  [NOT NULL]&lt;br&gt;max_rent  [NOT NULL]&lt;br&gt;square_feet  [NULL]&lt;br&gt;classification_id  [FK, NULL]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="368" width="350" x="1250" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="RENTER" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#F8FAFC;strokeColor=#3B536D;strokeWidth=2;shadow=0;" value="&lt;div style=&quot;text-align:center;font-size:15px;font-weight:bold;color:#17324e&quot;&gt;RENTER&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #cbd5e1&quot;&gt;&lt;div style=&quot;font-family:monospace;font-size:11px;text-align:left;line-height:1.55&quot;&gt;renter_id  [PK, NOT NULL]&lt;br&gt;first_name  [NOT NULL]&lt;br&gt;last_name  [NOT NULL]&lt;br&gt;email  [UNIQUE, NOT NULL]&lt;br&gt;phone  [NULL]&lt;br&gt;address  [NULL]&lt;br&gt;short_description  [NULL]&lt;br&gt;long_description  [NULL]&lt;br&gt;latitude  [NULL]&lt;br&gt;longitude  [NULL]&lt;br&gt;decision_date  [NULL]&lt;br&gt;bedrooms  [NULL]&lt;br&gt;bathrooms  [NULL]&lt;br&gt;min_budget  [NOT NULL]&lt;br&gt;max_budget  [NOT NULL]&lt;br&gt;classification_id  [FK, NULL]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="390" width="350" x="440" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AGENT_PACKAGE" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#F8FAFC;strokeColor=#3B536D;strokeWidth=2;shadow=0;" value="&lt;div style=&quot;text-align:center;font-size:15px;font-weight:bold;color:#17324e&quot;&gt;AGENT_PACKAGE&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #cbd5e1&quot;&gt;&lt;div style=&quot;font-family:monospace;font-size:11px;text-align:left;line-height:1.55&quot;&gt;package_id  [PK, NOT NULL]&lt;br&gt;name  [UNIQUE, NOT NULL]&lt;br&gt;description  [NOT NULL]&lt;br&gt;access_level  [NOT NULL]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="126" width="318" x="60" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="AGENT" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#F8FAFC;strokeColor=#3B536D;strokeWidth=2;shadow=0;" value="&lt;div style=&quot;text-align:center;font-size:15px;font-weight:bold;color:#17324e&quot;&gt;AGENT&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #cbd5e1&quot;&gt;&lt;div style=&quot;font-family:monospace;font-size:11px;text-align:left;line-height:1.55&quot;&gt;agent_id  [PK, NOT NULL]&lt;br&gt;first_name  [NOT NULL]&lt;br&gt;last_name  [NOT NULL]&lt;br&gt;email  [UNIQUE, NOT NULL]&lt;br&gt;phone  [NULL]&lt;br&gt;package_id  [FK, NOT NULL]&lt;br&gt;billing_cycle  [NOT NULL]&lt;br&gt;paid_through  [NULL]&lt;br&gt;is_active  [NOT NULL]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="236" width="318" x="440" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="PROPERTY_AMENITY" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#F8FAFC;strokeColor=#3B536D;strokeWidth=2;shadow=0;" value="&lt;div style=&quot;text-align:center;font-size:15px;font-weight:bold;color:#17324e&quot;&gt;PROPERTY_AMENITY&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #cbd5e1&quot;&gt;&lt;div style=&quot;font-family:monospace;font-size:11px;text-align:left;line-height:1.55&quot;&gt;property_id  [PK/FK, NOT NULL]&lt;br&gt;amenity_id  [PK/FK, NOT NULL]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="82" width="318" x="1660" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="RENTER_AMENITY" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#F8FAFC;strokeColor=#3B536D;strokeWidth=2;shadow=0;" value="&lt;div style=&quot;text-align:center;font-size:15px;font-weight:bold;color:#17324e&quot;&gt;RENTER_AMENITY&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #cbd5e1&quot;&gt;&lt;div style=&quot;font-family:monospace;font-size:11px;text-align:left;line-height:1.55&quot;&gt;renter_id  [PK/FK, NOT NULL]&lt;br&gt;amenity_id  [PK/FK, NOT NULL]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="82" width="318" x="860" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RENTER_PROPERTY" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#F8FAFC;strokeColor=#3B536D;strokeWidth=2;shadow=0;" value="&lt;div style=&quot;text-align:center;font-size:15px;font-weight:bold;color:#17324e&quot;&gt;RENTER_PROPERTY&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #cbd5e1&quot;&gt;&lt;div style=&quot;font-family:monospace;font-size:11px;text-align:left;line-height:1.55&quot;&gt;renter_id  [PK/FK, NOT NULL]&lt;br&gt;property_id  [PK/FK, NOT NULL]&lt;br&gt;saved_at  [NOT NULL]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="104" width="318" x="1330" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="PROPERTY_AGENT" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#F8FAFC;strokeColor=#3B536D;strokeWidth=2;shadow=0;" value="&lt;div style=&quot;text-align:center;font-size:15px;font-weight:bold;color:#17324e&quot;&gt;PROPERTY_AGENT&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #cbd5e1&quot;&gt;&lt;div style=&quot;font-family:monospace;font-size:11px;text-align:left;line-height:1.55&quot;&gt;property_id  [PK/FK, NOT NULL]&lt;br&gt;agent_id  [PK/FK, NOT NULL]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="82" width="318" x="850" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="OFFER" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#F8FAFC;strokeColor=#3B536D;strokeWidth=2;shadow=0;" value="&lt;div style=&quot;text-align:center;font-size:15px;font-weight:bold;color:#17324e&quot;&gt;OFFER&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #cbd5e1&quot;&gt;&lt;div style=&quot;font-family:monospace;font-size:11px;text-align:left;line-height:1.55&quot;&gt;offer_id  [PK, NOT NULL]&lt;br&gt;agent_id  [FK, NOT NULL]&lt;br&gt;renter_id  [FK, NOT NULL]&lt;br&gt;property_id  [FK, NOT NULL]&lt;br&gt;description  [NOT NULL]&lt;br&gt;expires_at  [NOT NULL]&lt;br&gt;status  [NOT NULL]&lt;br&gt;created_at  [NOT NULL]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="214" width="318" x="850" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="CLASSIFICATION" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;startArrow=ERzeroToOne;startFill=0;endArrow=ERzeroToMany;endFill=0;dashed=1;dashPattern=6 4;fontSize=11;labelBackgroundColor=#FFFFFF;entryX=0.912;entryY=-0.003;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.614;exitY=-0.007;exitDx=0;exitDy=0;exitPerimeter=0;" target="PROPERTY" value="classifies (0..* : 0..1)">
+          <mxGeometry relative="1" x="0.0713" as="geometry">
+            <mxPoint x="360.0040000000001" y="39.99599999999996" as="sourcePoint" />
+            <mxPoint x="1570.3599999999997" y="521.968" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="CLASSIFICATION" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;startArrow=ERzeroToOne;startFill=0;endArrow=ERzeroToMany;endFill=0;dashed=1;dashPattern=6 4;fontSize=11;labelBackgroundColor=#FFFFFF;" target="RENTER" value="classifies (0..* : 0..1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="AGENT_PACKAGE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;dashed=1;dashPattern=6 4;fontSize=11;labelBackgroundColor=#FFFFFF;" target="AGENT" value="provides (0..* : 1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="PROPERTY" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;fontSize=11;labelBackgroundColor=#FFFFFF;" target="PROPERTY_AMENITY" value="has (0..* : 1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="AMENITY" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;fontSize=11;labelBackgroundColor=#FFFFFF;" target="PROPERTY_AMENITY" value="appears in (0..* : 1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="RENTER" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;fontSize=11;labelBackgroundColor=#FFFFFF;" target="RENTER_AMENITY" value="requests (0..* : 1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="AMENITY" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;fontSize=11;labelBackgroundColor=#FFFFFF;" target="RENTER_AMENITY" value="appears in (0..* : 1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="RENTER" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;fontSize=11;labelBackgroundColor=#FFFFFF;entryX=0.914;entryY=0.012;entryDx=0;entryDy=0;entryPerimeter=0;" target="RENTER_PROPERTY" value="saves (0..* : 1)">
+          <mxGeometry relative="1" x="0.0689" as="geometry">
+            <Array as="points">
+              <mxPoint x="1620" y="402" />
+              <mxPoint x="1620" y="1100" />
+            </Array>
+            <mxPoint x="800" y="402" as="sourcePoint" />
+            <mxPoint x="1630" y="1100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="PROPERTY" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;fontSize=11;labelBackgroundColor=#FFFFFF;" target="RENTER_PROPERTY" value="is saved in (0..* : 1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="PROPERTY" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;fontSize=11;labelBackgroundColor=#FFFFFF;entryX=0.608;entryY=0.001;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.001;exitY=0.93;exitDx=0;exitDy=0;exitPerimeter=0;" target="PROPERTY_AGENT" value="is represented by (0..* : 1)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1300" y="980" as="sourcePoint" />
+            <mxPoint x="1079.9999999999995" y="1186" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="AGENT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;fontSize=11;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="PROPERTY_AGENT" value="represents (0..* : 1)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="507" y="830" as="sourcePoint" />
+            <mxPoint x="757.9999999999995" y="1182" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="AGENT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;dashed=1;dashPattern=6 4;fontSize=11;labelBackgroundColor=#FFFFFF;" target="OFFER" value="makes (0..* : 1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="RENTER" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;dashed=1;dashPattern=6 4;fontSize=11;labelBackgroundColor=#FFFFFF;" target="OFFER" value="receives (0..* : 1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="PROPERTY" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;dashed=1;dashPattern=6 4;fontSize=11;labelBackgroundColor=#FFFFFF;" target="OFFER" value="is offered for (0..* : 1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
