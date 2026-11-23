@@ -65,3 +65,99 @@ Once you have completed both of the items above, you will need to submit the lin
 - [Make a ReadMe file Web-based Editor](https://www.makeareadme.com/)
 - [Draw.io Web-based diagramming tool](https://app.diagrams.net/)
 - [Creating Entity Relationship Diagrams using Draw.io](https://www.youtube.com/watch?v=lAtCySGDD48)
+
+
+ENTITIES
+
+1. RENTER
+   - Stores information about people looking for apartments
+   - Include: Name, Email, Phone Number, Preferred Rent Range, Number of Bedrooms and Bathrooms,  and Decision Date
+2. PROPERTY
+   - Stores information about apartments available for rent
+   - Includes: Address, Description, Location, and Minimum and Maximum Rent
+3. AMENITY
+   - Stores information about luxury features available at apartments
+   - Examples: Swimming pool, parking garage, fitness center
+4. AGENT
+   - Stores information about property agents who make apartment offers to renters
+   - Includes: Agent Name, Email, Phone Number, Account Status (active/inactive)
+5. AGENT_PACKAGE
+   - Stores information about the subscription packages available to property agents
+   - Includes: Package Name, Description, Payment Option (monthly/yearly)
+6. CLASSIFICATION
+   - Stores 3 predetermined luxury classifications for properties and renter profiles
+   - Includes: Classification Identifier, Title, Description
+7. OFFER
+   - Stores apartment offers sent by property agents to renters
+   - Includes: Offer Description, Expiration Date, Property being Offered, and Offer Status (declined/under consideration/approved)
+8. PROPERTY_AMENITY
+   - Connects properties to their available amenities 
+   - Allows one property to have multiple amenities and one amenity to belong to multiple properties
+9. RENTER_AMENITY
+   - Connects renters to the amenities they want in an apartment
+   - Allows renters to select multiple preferred amenities
+10. RENTER_PROPERTY
+    - Stores the properties that prospective renters add to their profiles
+    - Allows one renter to save multiple properties
+    - Renter can also have no saved properties 
+11. PROPERTY_AGENT
+    - Connects property agents to the properties they represent
+    - Allows one property to have multiple agents
+    - Property can exist without having an agent assigned to it
+
+
+RELATIONSHIPS 
+
+1. RENTER & PROPERTY
+   - RENTER can save 0 or many PROPERTIES
+   - PROPERTY can be saved by 0 or many RENTERS
+   - Relationship: Many-to-Many (M), connected thru RENTER_PROPERTY 
+2. PROPERTY & AMENITY
+   - PROPERTY can have 0 to many AMENTITIES
+   - AMENITY can belong to 0 or many PROPERTIES
+   - Relationship: Many-to-Many (M), connected thru PROPERTY_AMENITY
+3. RENTER & AMENITY
+   - RENTER can select 0 or many AMENITIES
+   - AMENITY can be selected by 0 or many RENTERS
+   - Relationship: Many-to-Many (M), connected thru RENTER_AMENITY
+4. AGENT & PROPERTY
+   - AGENT can represent 0 to many PROPERTIES
+   - PROPERTY can be represented by 0 to many AGENTS
+   - Relationship: Many-to-Many (M), connected thru PROPERTY_AGENT
+5. AGENT_PACKAGE & AGENT
+   - AGENT_PACKAGE can be selected by 0 or many AGENTS
+   - AGENT must select exactly one AGENT_PACKAGE
+   - Relationship: One-to-Many (1) 
+6. CLASSIFICATION & PROPERTY
+   - CLASSIFICATION can describe 0 or many PROPERTIES
+   - PROPERTY can have 0 or 1 CLASSIFICATION
+   - Relationship: One-to-Many (1)
+7. CLASSIFICATION & RENTER
+   - CLASSIFICATION can be preferred by 0 or many RENTERS
+   - RENTER can prefer 0 or 1 CLASSIFICATION
+   - Relationship: One-to-Many (1) 
+8. AGENT & OFFER
+   - AGENT can make 0 or many OFFERS
+   - OFFER must be made by exactly 1 AGENT
+   - Relationship: One-to-Many (1)
+9. RENTER & OFFER
+   - RENTER can receive 0 or many OFFERS
+   - OFFER must be sent to exactly 1 RENTER
+   - Relationship: One-to-Many (1)
+10. PROPERTY & OFFER
+   - PROPERTY can be included in 0 or many OFFERS
+   - OFFER must refer to exactly 1 PROPERTY
+   - Relationship: One-to-Many (1)
+
+ASSUMPTIONS
+
+1. Can a renter have 0 saved properties? --> YES
+2. Can a property exist without an assigned agent? --> YES
+3. Can an agent represent multiple properties? --> YES
+4. Can a property have multiple amenities? --> YES
+5. Can renters select multiple preferred amenities? --> YES
+6. Is it necessary that every offer belong to one renter, one agent, and one property? -->YES
+7. Can a renter receive multiple offers? --> YES
+8. Can a property exist without being classified a luxury? --> YES
+9. Is it necessary that an agent choose a subscription package? --> YES
+10. Can an agent make an offer for a property they do not represent? --> NO
