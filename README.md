@@ -161,3 +161,8 @@ ASSUMPTIONS
 8. Can a property exist without being classified a luxury? --> YES
 9. Is it necessary that an agent choose a subscription package? --> YES
 10. Can an agent make an offer for a property they do not represent? --> NO
+
+ER Diagram
+
+![MPLSRenters ER Diagram](MPLSRenters_ER_Pandey.png)
+
